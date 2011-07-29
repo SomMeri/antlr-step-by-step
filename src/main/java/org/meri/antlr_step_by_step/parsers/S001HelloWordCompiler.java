@@ -5,9 +5,6 @@ import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
 import org.antlr.runtime.tree.CommonTree;
-import org.meri.antlr_step_by_step.parsers.S001HelloWordLexer;
-import org.meri.antlr_step_by_step.parsers.S001HelloWordParser;
-import org.meri.antlr_step_by_step.parsers.S001HelloWordParser.expression_return;
 
 public class S001HelloWordCompiler {
 

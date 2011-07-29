@@ -8,9 +8,9 @@ import org.junit.Test;
 public class S001HelloWordTest {
 
 	/**
-	 * Abstract syntax tree generated from "Hello word!" should have unnamed root
-	 * node with two children. First child corresponds to the salutation token and 
-	 * second child corresponds to the end symbol token.
+	 * Abstract syntax tree generated from "Hello word!" should have an unnamed 
+	 * root node with two children. First child corresponds to salutation token 
+	 * and second child corresponds to end symbol token.
 	 * 
 	 * Token type constants are defined in generated S001HelloWordParser class.
 	 */
