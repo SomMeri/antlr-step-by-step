@@ -25,13 +25,4 @@ public class S001HelloWordTest {
 		assertEquals(S001HelloWordParser.ENDSYMBOL, ast.getChild(1).getType());
 	}
 
-//	@Test
-//	public void testWrongExpression() {
-//		//continue here
-//		S001HelloWordCompiler compiler = new S001HelloWordCompiler();
-//		CommonTree ast = compiler.compile("Bye word!");
-//		assertEquals(S001HelloWordParser.SALUTATION, ast.getChild(0).getType());
-//		assertEquals(S001HelloWordParser.ENDSYMBOL, ast.getChild(1).getType());
-//	}
-
 }
