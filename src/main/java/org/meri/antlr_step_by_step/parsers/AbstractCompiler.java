@@ -18,7 +18,12 @@ public abstract class AbstractCompiler {
 		//indent level
 		for (int i = 0; i < level; i++)
 			System.out.print("--");
-	
+
+		if (tree==null) {
+			System.out.println(" null tree.");
+			return ;
+		}
+
 		//print node description: type code followed by token text
 		System.out.println(" " + tree.getType() + " " + tree.getText());
 		

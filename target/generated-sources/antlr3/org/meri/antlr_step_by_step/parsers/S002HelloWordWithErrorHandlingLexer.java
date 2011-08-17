@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:46:29 org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g 2011-07-29 12:32:06
+// $ANTLR 3.3 Nov 30, 2010 12:46:29 org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g 2011-08-17 21:30:08
 
 package org.meri.antlr_step_by_step.parsers;
 
@@ -31,8 +31,8 @@ public class S002HelloWordWithErrorHandlingLexer extends Lexer {
         try {
             int _type = SALUTATION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g:25:11: ( 'Hello word' )
-            // org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g:25:12: 'Hello word'
+            // org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g:28:11: ( 'Hello word' )
+            // org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g:28:12: 'Hello word'
             {
             match("Hello word"); 
 
@@ -52,8 +52,8 @@ public class S002HelloWordWithErrorHandlingLexer extends Lexer {
         try {
             int _type = ENDSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g:26:10: ( '!' )
-            // org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g:26:11: '!'
+            // org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g:29:10: ( '!' )
+            // org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g:29:11: '!'
             {
             match('!'); 
 

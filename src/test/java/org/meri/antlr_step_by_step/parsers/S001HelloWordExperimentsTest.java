@@ -6,7 +6,6 @@ import org.antlr.runtime.tree.CommonTree;
 import org.junit.Test;
 
 public class S001HelloWordExperimentsTest {
-	//
 	
 	@Test
 	public void testSmallError() {

@@ -10,6 +10,7 @@ public class S002HelloWordWithErrorHandlingCompiler extends AbstractCompiler {
 
 	public CommonTree compile(String expression) {
 		try {
+			System.out.println(expression);
 			//lexer splits input into tokens
 			ANTLRStringStream input = new ANTLRStringStream(expression);
 			TokenStream tokens = new CommonTokenStream(new S002HelloWordWithErrorHandlingLexer(input));
@@ -27,4 +28,12 @@ public class S002HelloWordWithErrorHandlingCompiler extends AbstractCompiler {
 		}
 	}
 
+	@SuppressWarnings("serial")
+	public static class S002HelloWordError extends RuntimeException {
+
+		public S002HelloWordError(String arg0, Throwable arg1) {
+			super(arg0, arg1);
+		}
+		
+	}
 }

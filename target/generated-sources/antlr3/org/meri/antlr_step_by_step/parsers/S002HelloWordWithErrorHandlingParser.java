@@ -1,7 +1,9 @@
-// $ANTLR 3.3 Nov 30, 2010 12:46:29 org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g 2011-07-29 12:32:06
+// $ANTLR 3.3 Nov 30, 2010 12:46:29 org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g 2011-08-17 21:30:08
 
 package org.meri.antlr_step_by_step.parsers;
 
+//add imports 
+import org.meri.antlr_step_by_step.parsers.S002HelloWordWithErrorHandlingCompiler.S002HelloWordError;
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -50,7 +52,7 @@ public class S002HelloWordWithErrorHandlingParser extends Parser {
     };
 
     // $ANTLR start "expression"
-    // org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g:30:1: expression : SALUTATION ENDSYMBOL ;
+    // org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g:33:1: expression : SALUTATION ENDSYMBOL ;
     public final S002HelloWordWithErrorHandlingParser.expression_return expression() throws RecognitionException {
         S002HelloWordWithErrorHandlingParser.expression_return retval = new S002HelloWordWithErrorHandlingParser.expression_return();
         retval.start = input.LT(1);
@@ -64,8 +66,8 @@ public class S002HelloWordWithErrorHandlingParser extends Parser {
         Object ENDSYMBOL2_tree=null;
 
         try {
-            // org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g:30:12: ( SALUTATION ENDSYMBOL )
-            // org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g:30:14: SALUTATION ENDSYMBOL
+            // org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g:33:12: ( SALUTATION ENDSYMBOL )
+            // org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g:33:14: SALUTATION ENDSYMBOL
             {
             root_0 = (Object)adaptor.nil();
 
@@ -86,10 +88,10 @@ public class S002HelloWordWithErrorHandlingParser extends Parser {
             adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
 
         }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-    	retval.tree = (Object)adaptor.errorNode(input, retval.start, input.LT(-1), re);
+        catch (RecognitionException e) {
+
+            	//Custom handling of an exception. Any java code is allowed.
+            	throw new S002HelloWordError(":(", e); 
 
         }
         finally {

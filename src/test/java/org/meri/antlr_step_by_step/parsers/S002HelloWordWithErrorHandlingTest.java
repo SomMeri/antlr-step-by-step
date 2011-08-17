@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.antlr.runtime.tree.CommonTree;
 import org.junit.Test;
+import org.meri.antlr_step_by_step.parsers.S002HelloWordWithErrorHandlingCompiler.S002HelloWordError;
 
 public class S002HelloWordWithErrorHandlingTest {
 
@@ -12,17 +13,49 @@ public class S002HelloWordWithErrorHandlingTest {
 	 * root node with two children. First child corresponds to salutation token 
 	 * and second child corresponds to end symbol token.
 	 * 
-	 * Token type constants are defined in generated S001HelloWordParser class.
+	 * Token type constants are defined in generated S002HelloWordWithErrorHandlingParser class.
 	 */
 	@Test
 	public void testCorrectExpression() {
 		//compile the expression
-		S001HelloWordCompiler compiler = new S001HelloWordCompiler();
+		S002HelloWordWithErrorHandlingCompiler compiler = new S002HelloWordWithErrorHandlingCompiler();
 		CommonTree ast = compiler.compile("Hello word!");
 		
 		//check AST structure
-		assertEquals(S001HelloWordParser.SALUTATION, ast.getChild(0).getType());
-		assertEquals(S001HelloWordParser.ENDSYMBOL, ast.getChild(1).getType());
+		assertEquals(S002HelloWordWithErrorHandlingParser.SALUTATION, ast.getChild(0).getType());
+		assertEquals(S002HelloWordWithErrorHandlingParser.ENDSYMBOL, ast.getChild(1).getType());
+	}
+
+	@Test
+	public void testSmallError() {
+		//compile the expression
+		S002HelloWordWithErrorHandlingCompiler compiler = new S002HelloWordWithErrorHandlingCompiler();
+		CommonTree ast = compiler.compile("Hello word?");
+
+		//check AST structure
+		assertEquals(S002HelloWordWithErrorHandlingParser.SALUTATION, ast.getChild(0).getType());
+		assertEquals(S002HelloWordWithErrorHandlingParser.ENDSYMBOL, ast.getChild(1).getType());
+	}
+
+	@Test
+	public void testBiggerError() {
+		//compile the expression
+		S002HelloWordWithErrorHandlingCompiler compiler = new S002HelloWordWithErrorHandlingCompiler();
+		CommonTree ast = compiler.compile("Bye!");
+
+		//check AST structure
+		assertEquals(S002HelloWordWithErrorHandlingParser.SALUTATION, ast.getChild(0).getType());
+		assertEquals(S002HelloWordWithErrorHandlingParser.ENDSYMBOL, ast.getChild(1).getType());
+	}
+
+	@Test(expected=S002HelloWordError.class)
+	public void testCompletelyWrong() {
+		//compile the expression
+		S002HelloWordWithErrorHandlingCompiler compiler = new S002HelloWordWithErrorHandlingCompiler();
+		CommonTree ast = compiler.compile("Incorrect Expression");
+
+		//check AST structure
+		assertEquals(0, ast.getChildCount());
 	}
 
 }
