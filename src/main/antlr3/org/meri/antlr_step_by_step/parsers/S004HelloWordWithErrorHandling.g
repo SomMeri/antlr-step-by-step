@@ -1,6 +1,5 @@
 grammar S004HelloWordWithErrorHandling;
 
-//NOT COPIED YET
 options
 {
   // antlr will generate java lexer and parser
