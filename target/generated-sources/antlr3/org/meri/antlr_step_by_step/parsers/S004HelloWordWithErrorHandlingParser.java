@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:46:29 org\\meri\\antlr_step_by_step\\parsers\\S004HelloWordWithErrorHandling.g 2011-08-17 22:02:24
+// $ANTLR 3.3 Nov 30, 2010 12:46:29 org\\meri\\antlr_step_by_step\\parsers\\S004HelloWordWithErrorHandling.g 2011-09-07 09:23:54
 
 package org.meri.antlr_step_by_step.parsers;
 
@@ -71,7 +71,7 @@ public class S004HelloWordWithErrorHandlingParser extends Parser {
     };
 
     // $ANTLR start "expression"
-    // org\\meri\\antlr_step_by_step\\parsers\\S004HelloWordWithErrorHandling.g:77:1: expression : SALUTATION ENDSYMBOL ;
+    // org\\meri\\antlr_step_by_step\\parsers\\S004HelloWordWithErrorHandling.g:76:1: expression : SALUTATION ENDSYMBOL ;
     public final S004HelloWordWithErrorHandlingParser.expression_return expression() throws RecognitionException {
         S004HelloWordWithErrorHandlingParser.expression_return retval = new S004HelloWordWithErrorHandlingParser.expression_return();
         retval.start = input.LT(1);
@@ -85,16 +85,16 @@ public class S004HelloWordWithErrorHandlingParser extends Parser {
         Object ENDSYMBOL2_tree=null;
 
         try {
-            // org\\meri\\antlr_step_by_step\\parsers\\S004HelloWordWithErrorHandling.g:77:12: ( SALUTATION ENDSYMBOL )
-            // org\\meri\\antlr_step_by_step\\parsers\\S004HelloWordWithErrorHandling.g:77:14: SALUTATION ENDSYMBOL
+            // org\\meri\\antlr_step_by_step\\parsers\\S004HelloWordWithErrorHandling.g:76:12: ( SALUTATION ENDSYMBOL )
+            // org\\meri\\antlr_step_by_step\\parsers\\S004HelloWordWithErrorHandling.g:76:14: SALUTATION ENDSYMBOL
             {
             root_0 = (Object)adaptor.nil();
 
-            SALUTATION1=(Token)match(input,SALUTATION,FOLLOW_SALUTATION_in_expression100); 
+            SALUTATION1=(Token)match(input,SALUTATION,FOLLOW_SALUTATION_in_expression99); 
             SALUTATION1_tree = (Object)adaptor.create(SALUTATION1);
             adaptor.addChild(root_0, SALUTATION1_tree);
 
-            ENDSYMBOL2=(Token)match(input,ENDSYMBOL,FOLLOW_ENDSYMBOL_in_expression102); 
+            ENDSYMBOL2=(Token)match(input,ENDSYMBOL,FOLLOW_ENDSYMBOL_in_expression101); 
             ENDSYMBOL2_tree = (Object)adaptor.create(ENDSYMBOL2);
             adaptor.addChild(root_0, ENDSYMBOL2_tree);
 
@@ -124,7 +124,7 @@ public class S004HelloWordWithErrorHandlingParser extends Parser {
 
  
 
-    public static final BitSet FOLLOW_SALUTATION_in_expression100 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ENDSYMBOL_in_expression102 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SALUTATION_in_expression99 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ENDSYMBOL_in_expression101 = new BitSet(new long[]{0x0000000000000002L});
 
 }

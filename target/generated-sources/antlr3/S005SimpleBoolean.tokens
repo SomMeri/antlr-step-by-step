@@ -4,3 +4,4 @@ AND=6
 OR=7
 NOT=8
 NAME=9
+WS=10

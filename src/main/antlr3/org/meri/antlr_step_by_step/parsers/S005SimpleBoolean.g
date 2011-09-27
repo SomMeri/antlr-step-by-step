@@ -12,12 +12,34 @@ options
 //package, we have to add package declaration on top of it
 @lexer::header {
 package org.meri.antlr_step_by_step.parsers;
+import org.meri.antlr_step_by_step.parsers.S005SimpleBooleanCompiler.S005Error;
 }
 
 //as the generated parser will reside in org.meri.antlr_step_by_step.parsers 
 //package, we have to add package declaration on top of it
 @parser::header {
 package org.meri.antlr_step_by_step.parsers;
+import org.meri.antlr_step_by_step.parsers.S005SimpleBooleanCompiler.S005Error;
+}
+
+//override some methods and add new members to generated lexer
+@lexer::members {
+  //override method
+  public void reportError(RecognitionException e) {
+    displayRecognitionError(this.getTokenNames(), e);
+    throw new S005Error(":(", e); 
+  }
+  
+}
+
+//override some methods and add new members to generated parser
+@parser::members {
+  //override method
+  public void reportError(RecognitionException e) {
+    displayRecognitionError(this.getTokenNames(), e);
+    throw new S005Error(":(", e); 
+  }
+  
 }
 
 // ***************** lexer rules:
@@ -28,6 +50,7 @@ AND : '&&';
 OR : '||';
 NOT : '!';
 NAME : ('a'..'z' | '0'..'9')+; 
+WS : ( ' ' | '\t' | '\r' | '\n' )+ { $channel = HIDDEN; };
 
 // ***************** parser rules:
 //This looks useless, but ANTLR would complain about "no start rule (...)"

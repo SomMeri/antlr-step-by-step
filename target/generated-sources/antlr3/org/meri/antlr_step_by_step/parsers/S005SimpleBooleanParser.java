@@ -1,6 +1,7 @@
-// $ANTLR 3.3 Nov 30, 2010 12:46:29 org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g 2011-08-17 23:09:26
+// $ANTLR 3.3 Nov 30, 2010 12:46:29 org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g 2011-09-07 09:53:00
 
 package org.meri.antlr_step_by_step.parsers;
+import org.meri.antlr_step_by_step.parsers.S005SimpleBooleanCompiler.S005Error;
 
 
 import org.antlr.runtime.*;
@@ -13,7 +14,7 @@ import org.antlr.runtime.tree.*;
 
 public class S005SimpleBooleanParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "LPAREN", "RPAREN", "AND", "OR", "NOT", "NAME"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "LPAREN", "RPAREN", "AND", "OR", "NOT", "NAME", "WS"
     };
     public static final int EOF=-1;
     public static final int LPAREN=4;
@@ -22,6 +23,7 @@ public class S005SimpleBooleanParser extends Parser {
     public static final int OR=7;
     public static final int NOT=8;
     public static final int NAME=9;
+    public static final int WS=10;
 
     // delegates
     // delegators
@@ -48,13 +50,21 @@ public class S005SimpleBooleanParser extends Parser {
     public String getGrammarFileName() { return "org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g"; }
 
 
+      //override method
+      public void reportError(RecognitionException e) {
+        displayRecognitionError(this.getTokenNames(), e);
+        throw new S005Error(":(", e); 
+      }
+      
+
+
     public static class expression_return extends ParserRuleReturnScope {
         Object tree;
         public Object getTree() { return tree; }
     };
 
     // $ANTLR start "expression"
-    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:33:1: expression : andexpression ;
+    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:61:1: expression : andexpression ;
     public final S005SimpleBooleanParser.expression_return expression() throws RecognitionException {
         S005SimpleBooleanParser.expression_return retval = new S005SimpleBooleanParser.expression_return();
         retval.start = input.LT(1);
@@ -66,12 +76,12 @@ public class S005SimpleBooleanParser extends Parser {
 
 
         try {
-            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:33:12: ( andexpression )
-            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:33:14: andexpression
+            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:61:12: ( andexpression )
+            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:61:14: andexpression
             {
             root_0 = (Object)adaptor.nil();
 
-            pushFollow(FOLLOW_andexpression_in_expression121);
+            pushFollow(FOLLOW_andexpression_in_expression172);
             andexpression1=andexpression();
 
             state._fsp--;
@@ -104,7 +114,7 @@ public class S005SimpleBooleanParser extends Parser {
     };
 
     // $ANTLR start "andexpression"
-    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:35:1: andexpression : orexpression ( AND orexpression )* ;
+    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:64:1: andexpression : orexpression ( AND orexpression )* ;
     public final S005SimpleBooleanParser.andexpression_return andexpression() throws RecognitionException {
         S005SimpleBooleanParser.andexpression_return retval = new S005SimpleBooleanParser.andexpression_return();
         retval.start = input.LT(1);
@@ -120,18 +130,18 @@ public class S005SimpleBooleanParser extends Parser {
         Object AND3_tree=null;
 
         try {
-            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:35:15: ( orexpression ( AND orexpression )* )
-            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:35:17: orexpression ( AND orexpression )*
+            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:64:15: ( orexpression ( AND orexpression )* )
+            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:64:17: orexpression ( AND orexpression )*
             {
             root_0 = (Object)adaptor.nil();
 
-            pushFollow(FOLLOW_orexpression_in_andexpression129);
+            pushFollow(FOLLOW_orexpression_in_andexpression181);
             orexpression2=orexpression();
 
             state._fsp--;
 
             adaptor.addChild(root_0, orexpression2.getTree());
-            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:35:30: ( AND orexpression )*
+            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:64:30: ( AND orexpression )*
             loop1:
             do {
                 int alt1=2;
@@ -146,13 +156,13 @@ public class S005SimpleBooleanParser extends Parser {
 
                 switch (alt1) {
             	case 1 :
-            	    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:35:31: AND orexpression
+            	    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:64:31: AND orexpression
             	    {
-            	    AND3=(Token)match(input,AND,FOLLOW_AND_in_andexpression132); 
+            	    AND3=(Token)match(input,AND,FOLLOW_AND_in_andexpression184); 
             	    AND3_tree = (Object)adaptor.create(AND3);
             	    adaptor.addChild(root_0, AND3_tree);
 
-            	    pushFollow(FOLLOW_orexpression_in_andexpression134);
+            	    pushFollow(FOLLOW_orexpression_in_andexpression186);
             	    orexpression4=orexpression();
 
             	    state._fsp--;
@@ -194,7 +204,7 @@ public class S005SimpleBooleanParser extends Parser {
     };
 
     // $ANTLR start "orexpression"
-    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:37:1: orexpression : notexpression ( OR notexpression )* ;
+    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:67:1: orexpression : notexpression ( OR notexpression )* ;
     public final S005SimpleBooleanParser.orexpression_return orexpression() throws RecognitionException {
         S005SimpleBooleanParser.orexpression_return retval = new S005SimpleBooleanParser.orexpression_return();
         retval.start = input.LT(1);
@@ -210,18 +220,18 @@ public class S005SimpleBooleanParser extends Parser {
         Object OR6_tree=null;
 
         try {
-            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:37:14: ( notexpression ( OR notexpression )* )
-            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:37:16: notexpression ( OR notexpression )*
+            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:67:14: ( notexpression ( OR notexpression )* )
+            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:67:16: notexpression ( OR notexpression )*
             {
             root_0 = (Object)adaptor.nil();
 
-            pushFollow(FOLLOW_notexpression_in_orexpression144);
+            pushFollow(FOLLOW_notexpression_in_orexpression197);
             notexpression5=notexpression();
 
             state._fsp--;
 
             adaptor.addChild(root_0, notexpression5.getTree());
-            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:37:30: ( OR notexpression )*
+            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:67:30: ( OR notexpression )*
             loop2:
             do {
                 int alt2=2;
@@ -236,13 +246,13 @@ public class S005SimpleBooleanParser extends Parser {
 
                 switch (alt2) {
             	case 1 :
-            	    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:37:31: OR notexpression
+            	    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:67:31: OR notexpression
             	    {
-            	    OR6=(Token)match(input,OR,FOLLOW_OR_in_orexpression147); 
+            	    OR6=(Token)match(input,OR,FOLLOW_OR_in_orexpression200); 
             	    OR6_tree = (Object)adaptor.create(OR6);
             	    adaptor.addChild(root_0, OR6_tree);
 
-            	    pushFollow(FOLLOW_notexpression_in_orexpression149);
+            	    pushFollow(FOLLOW_notexpression_in_orexpression202);
             	    notexpression7=notexpression();
 
             	    state._fsp--;
@@ -284,7 +294,7 @@ public class S005SimpleBooleanParser extends Parser {
     };
 
     // $ANTLR start "notexpression"
-    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:39:1: notexpression : ( NOT atom | atom );
+    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:69:1: notexpression : ( NOT atom | atom );
     public final S005SimpleBooleanParser.notexpression_return notexpression() throws RecognitionException {
         S005SimpleBooleanParser.notexpression_return retval = new S005SimpleBooleanParser.notexpression_return();
         retval.start = input.LT(1);
@@ -300,7 +310,7 @@ public class S005SimpleBooleanParser extends Parser {
         Object NOT8_tree=null;
 
         try {
-            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:39:15: ( NOT atom | atom )
+            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:69:15: ( NOT atom | atom )
             int alt3=2;
             switch ( input.LA(1) ) {
             case NOT:
@@ -323,15 +333,15 @@ public class S005SimpleBooleanParser extends Parser {
 
             switch (alt3) {
                 case 1 :
-                    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:39:17: NOT atom
+                    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:69:17: NOT atom
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    NOT8=(Token)match(input,NOT,FOLLOW_NOT_in_notexpression159); 
+                    NOT8=(Token)match(input,NOT,FOLLOW_NOT_in_notexpression212); 
                     NOT8_tree = (Object)adaptor.create(NOT8);
                     adaptor.addChild(root_0, NOT8_tree);
 
-                    pushFollow(FOLLOW_atom_in_notexpression161);
+                    pushFollow(FOLLOW_atom_in_notexpression214);
                     atom9=atom();
 
                     state._fsp--;
@@ -341,11 +351,11 @@ public class S005SimpleBooleanParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:39:28: atom
+                    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:69:28: atom
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    pushFollow(FOLLOW_atom_in_notexpression165);
+                    pushFollow(FOLLOW_atom_in_notexpression218);
                     atom10=atom();
 
                     state._fsp--;
@@ -380,7 +390,7 @@ public class S005SimpleBooleanParser extends Parser {
     };
 
     // $ANTLR start "atom"
-    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:40:1: atom : ( NAME | LPAREN andexpression RPAREN );
+    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:71:1: atom : ( NAME | LPAREN andexpression RPAREN );
     public final S005SimpleBooleanParser.atom_return atom() throws RecognitionException {
         S005SimpleBooleanParser.atom_return retval = new S005SimpleBooleanParser.atom_return();
         retval.start = input.LT(1);
@@ -398,7 +408,7 @@ public class S005SimpleBooleanParser extends Parser {
         Object RPAREN14_tree=null;
 
         try {
-            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:40:6: ( NAME | LPAREN andexpression RPAREN )
+            // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:71:6: ( NAME | LPAREN andexpression RPAREN )
             int alt4=2;
             switch ( input.LA(1) ) {
             case NAME:
@@ -420,11 +430,11 @@ public class S005SimpleBooleanParser extends Parser {
 
             switch (alt4) {
                 case 1 :
-                    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:40:8: NAME
+                    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:71:8: NAME
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    NAME11=(Token)match(input,NAME,FOLLOW_NAME_in_atom172); 
+                    NAME11=(Token)match(input,NAME,FOLLOW_NAME_in_atom226); 
                     NAME11_tree = (Object)adaptor.create(NAME11);
                     adaptor.addChild(root_0, NAME11_tree);
 
@@ -432,21 +442,21 @@ public class S005SimpleBooleanParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:40:15: LPAREN andexpression RPAREN
+                    // org\\meri\\antlr_step_by_step\\parsers\\S005SimpleBoolean.g:71:15: LPAREN andexpression RPAREN
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    LPAREN12=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_atom176); 
+                    LPAREN12=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_atom230); 
                     LPAREN12_tree = (Object)adaptor.create(LPAREN12);
                     adaptor.addChild(root_0, LPAREN12_tree);
 
-                    pushFollow(FOLLOW_andexpression_in_atom178);
+                    pushFollow(FOLLOW_andexpression_in_atom232);
                     andexpression13=andexpression();
 
                     state._fsp--;
 
                     adaptor.addChild(root_0, andexpression13.getTree());
-                    RPAREN14=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_atom180); 
+                    RPAREN14=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_atom234); 
                     RPAREN14_tree = (Object)adaptor.create(RPAREN14);
                     adaptor.addChild(root_0, RPAREN14_tree);
 
@@ -478,19 +488,19 @@ public class S005SimpleBooleanParser extends Parser {
 
  
 
-    public static final BitSet FOLLOW_andexpression_in_expression121 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_orexpression_in_andexpression129 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_AND_in_andexpression132 = new BitSet(new long[]{0x0000000000000310L});
-    public static final BitSet FOLLOW_orexpression_in_andexpression134 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_notexpression_in_orexpression144 = new BitSet(new long[]{0x0000000000000082L});
-    public static final BitSet FOLLOW_OR_in_orexpression147 = new BitSet(new long[]{0x0000000000000310L});
-    public static final BitSet FOLLOW_notexpression_in_orexpression149 = new BitSet(new long[]{0x0000000000000082L});
-    public static final BitSet FOLLOW_NOT_in_notexpression159 = new BitSet(new long[]{0x0000000000000310L});
-    public static final BitSet FOLLOW_atom_in_notexpression161 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_atom_in_notexpression165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_atom172 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LPAREN_in_atom176 = new BitSet(new long[]{0x0000000000000310L});
-    public static final BitSet FOLLOW_andexpression_in_atom178 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RPAREN_in_atom180 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_andexpression_in_expression172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_orexpression_in_andexpression181 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_AND_in_andexpression184 = new BitSet(new long[]{0x0000000000000310L});
+    public static final BitSet FOLLOW_orexpression_in_andexpression186 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_notexpression_in_orexpression197 = new BitSet(new long[]{0x0000000000000082L});
+    public static final BitSet FOLLOW_OR_in_orexpression200 = new BitSet(new long[]{0x0000000000000310L});
+    public static final BitSet FOLLOW_notexpression_in_orexpression202 = new BitSet(new long[]{0x0000000000000082L});
+    public static final BitSet FOLLOW_NOT_in_notexpression212 = new BitSet(new long[]{0x0000000000000310L});
+    public static final BitSet FOLLOW_atom_in_notexpression214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_atom_in_notexpression218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_atom226 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LPAREN_in_atom230 = new BitSet(new long[]{0x0000000000000310L});
+    public static final BitSet FOLLOW_andexpression_in_atom232 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RPAREN_in_atom234 = new BitSet(new long[]{0x0000000000000002L});
 
 }

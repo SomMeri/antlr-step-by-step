@@ -12,11 +12,11 @@ public class S005SimpleBooleanCompiler extends AbstractCompiler {
 		try {
 			//lexer splits input into tokens
 			ANTLRStringStream input = new ANTLRStringStream(expression);
-			TokenStream tokens = new CommonTokenStream(new S001HelloWordLexer(input));
+			TokenStream tokens = new CommonTokenStream(new S005SimpleBooleanLexer(input));
 			
 			//parser generates abstract syntax tree
-			S001HelloWordParser parser = new S001HelloWordParser(tokens);
-			S001HelloWordParser.expression_return ret = parser.expression();
+			S005SimpleBooleanParser parser = new S005SimpleBooleanParser(tokens);
+			S005SimpleBooleanParser.expression_return ret = parser.expression();
 			
 			//acquire parse result
 			CommonTree ast = (CommonTree) ret.tree;
