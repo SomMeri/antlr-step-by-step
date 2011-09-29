@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:46:29 org\\meri\\antlr_step_by_step\\parsers\\S006SimpleBoolean.g 2011-09-28 15:18:41
+// $ANTLR 3.3 Nov 30, 2010 12:46:29 org\\meri\\antlr_step_by_step\\parsers\\S006SimpleBoolean.g 2011-09-29 09:52:02
 
 package org.meri.antlr_step_by_step.parsers;
 import org.meri.antlr_step_by_step.parsers.S006SimpleBooleanCompiler.S006Error;

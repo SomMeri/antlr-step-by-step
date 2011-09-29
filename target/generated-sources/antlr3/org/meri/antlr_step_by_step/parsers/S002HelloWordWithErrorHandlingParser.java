@@ -1,9 +1,10 @@
-// $ANTLR 3.3 Nov 30, 2010 12:46:29 org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g 2011-08-17 21:30:08
+// $ANTLR 3.3 Nov 30, 2010 12:46:29 org\\meri\\antlr_step_by_step\\parsers\\S002HelloWordWithErrorHandling.g 2011-09-29 09:52:03
 
 package org.meri.antlr_step_by_step.parsers;
 
 //add imports 
 import org.meri.antlr_step_by_step.parsers.S002HelloWordWithErrorHandlingCompiler.S002HelloWordError;
+
 
 import org.antlr.runtime.*;
 import java.util.Stack;

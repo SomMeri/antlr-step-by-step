@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:46:29 org\\meri\\antlr_step_by_step\\parsers\\S001HelloWord.g 2011-07-28 20:25:54
+// $ANTLR 3.3 Nov 30, 2010 12:46:29 org\\meri\\antlr_step_by_step\\parsers\\S001HelloWord.g 2011-09-29 09:52:04
 
 package org.meri.antlr_step_by_step.parsers;
 

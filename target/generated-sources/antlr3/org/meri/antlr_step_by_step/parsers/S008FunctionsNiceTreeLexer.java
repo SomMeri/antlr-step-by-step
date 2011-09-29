@@ -1,7 +1,7 @@
-// $ANTLR 3.3 Nov 30, 2010 12:46:29 org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g 2011-09-29 09:52:03
+// $ANTLR 3.3 Nov 30, 2010 12:46:29 org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g 2011-09-29 12:39:20
 
 package org.meri.antlr_step_by_step.parsers;
-import org.meri.antlr_step_by_step.parsers.S007BooleanWithFunctionsCompiler.S007Error;
+import org.meri.antlr_step_by_step.parsers.S008FunctionsNiceTreeCompiler.S008Error;
 
 
 import org.antlr.runtime.*;
@@ -9,7 +9,7 @@ import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
 
-public class S007BooleanWithFunctionsLexer extends Lexer {
+public class S008FunctionsNiceTreeLexer extends Lexer {
     public static final int EOF=-1;
     public static final int T__15=15;
     public static final int LPAREN=4;
@@ -27,7 +27,7 @@ public class S007BooleanWithFunctionsLexer extends Lexer {
       //override method
       public void reportError(RecognitionException e) {
         displayRecognitionError(this.getTokenNames(), e);
-        throw new S007Error(":(", e); 
+        throw new S008Error(":(", e); 
       }
       
 
@@ -35,23 +35,23 @@ public class S007BooleanWithFunctionsLexer extends Lexer {
     // delegates
     // delegators
 
-    public S007BooleanWithFunctionsLexer() {;} 
-    public S007BooleanWithFunctionsLexer(CharStream input) {
+    public S008FunctionsNiceTreeLexer() {;} 
+    public S008FunctionsNiceTreeLexer(CharStream input) {
         this(input, new RecognizerSharedState());
     }
-    public S007BooleanWithFunctionsLexer(CharStream input, RecognizerSharedState state) {
+    public S008FunctionsNiceTreeLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g"; }
+    public String getGrammarFileName() { return "org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g"; }
 
     // $ANTLR start "T__15"
     public final void mT__15() throws RecognitionException {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:20:7: ( ',' )
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:20:9: ','
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:20:7: ( ',' )
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:20:9: ','
             {
             match(','); 
 
@@ -70,8 +70,8 @@ public class S007BooleanWithFunctionsLexer extends Lexer {
         try {
             int _type = LPAREN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:47:8: ( '(' )
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:47:10: '('
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:47:8: ( '(' )
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:47:10: '('
             {
             match('('); 
 
@@ -90,8 +90,8 @@ public class S007BooleanWithFunctionsLexer extends Lexer {
         try {
             int _type = RPAREN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:48:8: ( ')' )
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:48:10: ')'
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:48:8: ( ')' )
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:48:10: ')'
             {
             match(')'); 
 
@@ -110,8 +110,8 @@ public class S007BooleanWithFunctionsLexer extends Lexer {
         try {
             int _type = AND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:49:5: ( '&&' )
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:49:7: '&&'
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:49:5: ( '&&' )
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:49:7: '&&'
             {
             match("&&"); 
 
@@ -131,8 +131,8 @@ public class S007BooleanWithFunctionsLexer extends Lexer {
         try {
             int _type = OR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:50:4: ( '||' )
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:50:6: '||'
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:50:4: ( '||' )
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:50:6: '||'
             {
             match("||"); 
 
@@ -152,8 +152,8 @@ public class S007BooleanWithFunctionsLexer extends Lexer {
         try {
             int _type = NOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:51:5: ( '!' )
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:51:7: '!'
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:51:5: ( '!' )
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:51:7: '!'
             {
             match('!'); 
 
@@ -172,8 +172,8 @@ public class S007BooleanWithFunctionsLexer extends Lexer {
         try {
             int _type = ALL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:53:5: ( 'all' )
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:53:7: 'all'
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:53:5: ( 'all' )
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:53:7: 'all'
             {
             match("all"); 
 
@@ -193,8 +193,8 @@ public class S007BooleanWithFunctionsLexer extends Lexer {
         try {
             int _type = ATLEASTONE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:54:12: ( 'atleastone' )
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:54:14: 'atleastone'
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:54:12: ( 'atleastone' )
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:54:14: 'atleastone'
             {
             match("atleastone"); 
 
@@ -214,8 +214,8 @@ public class S007BooleanWithFunctionsLexer extends Lexer {
         try {
             int _type = NEITHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:55:9: ( 'neither' )
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:55:11: 'neither'
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:55:9: ( 'neither' )
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:55:11: 'neither'
             {
             match("neither"); 
 
@@ -235,8 +235,8 @@ public class S007BooleanWithFunctionsLexer extends Lexer {
         try {
             int _type = NOTALL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:56:8: ( 'notall' )
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:56:10: 'notall'
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:56:8: ( 'notall' )
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:56:10: 'notall'
             {
             match("notall"); 
 
@@ -256,10 +256,10 @@ public class S007BooleanWithFunctionsLexer extends Lexer {
         try {
             int _type = NAME;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:58:6: ( ( 'a' .. 'z' | '0' .. '9' )+ )
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:58:8: ( 'a' .. 'z' | '0' .. '9' )+
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:58:6: ( ( 'a' .. 'z' | '0' .. '9' )+ )
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:58:8: ( 'a' .. 'z' | '0' .. '9' )+
             {
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:58:8: ( 'a' .. 'z' | '0' .. '9' )+
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:58:8: ( 'a' .. 'z' | '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -310,7 +310,7 @@ public class S007BooleanWithFunctionsLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:
+            	    // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -350,10 +350,10 @@ public class S007BooleanWithFunctionsLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:59:4: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:59:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:59:4: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:59:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:59:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:59:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt2=0;
             loop2:
             do {
@@ -372,7 +372,7 @@ public class S007BooleanWithFunctionsLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:
+            	    // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:
             	    {
             	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -409,89 +409,89 @@ public class S007BooleanWithFunctionsLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:1:8: ( T__15 | LPAREN | RPAREN | AND | OR | NOT | ALL | ATLEASTONE | NEITHER | NOTALL | NAME | WS )
+        // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:1:8: ( T__15 | LPAREN | RPAREN | AND | OR | NOT | ALL | ATLEASTONE | NEITHER | NOTALL | NAME | WS )
         int alt3=12;
         alt3 = dfa3.predict(input);
         switch (alt3) {
             case 1 :
-                // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:1:10: T__15
+                // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:1:10: T__15
                 {
                 mT__15(); 
 
                 }
                 break;
             case 2 :
-                // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:1:16: LPAREN
+                // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:1:16: LPAREN
                 {
                 mLPAREN(); 
 
                 }
                 break;
             case 3 :
-                // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:1:23: RPAREN
+                // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:1:23: RPAREN
                 {
                 mRPAREN(); 
 
                 }
                 break;
             case 4 :
-                // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:1:30: AND
+                // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:1:30: AND
                 {
                 mAND(); 
 
                 }
                 break;
             case 5 :
-                // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:1:34: OR
+                // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:1:34: OR
                 {
                 mOR(); 
 
                 }
                 break;
             case 6 :
-                // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:1:37: NOT
+                // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:1:37: NOT
                 {
                 mNOT(); 
 
                 }
                 break;
             case 7 :
-                // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:1:41: ALL
+                // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:1:41: ALL
                 {
                 mALL(); 
 
                 }
                 break;
             case 8 :
-                // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:1:45: ATLEASTONE
+                // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:1:45: ATLEASTONE
                 {
                 mATLEASTONE(); 
 
                 }
                 break;
             case 9 :
-                // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:1:56: NEITHER
+                // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:1:56: NEITHER
                 {
                 mNEITHER(); 
 
                 }
                 break;
             case 10 :
-                // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:1:64: NOTALL
+                // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:1:64: NOTALL
                 {
                 mNOTALL(); 
 
                 }
                 break;
             case 11 :
-                // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:1:71: NAME
+                // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:1:71: NAME
                 {
                 mNAME(); 
 
                 }
                 break;
             case 12 :
-                // org\\meri\\antlr_step_by_step\\parsers\\S007BooleanWithFunctions.g:1:76: WS
+                // org\\meri\\antlr_step_by_step\\parsers\\S008FunctionsNiceTree.g:1:76: WS
                 {
                 mWS(); 
 
